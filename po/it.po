@@ -1,0 +1,50 @@
+# Italian translations for restart-entry package.
+# Copyright (C) 2012 Andrea Santilli
+# This file is distributed under the same license as the restart-entry package.
+# Andrea Santilli <andreasantilli gmx com>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: restart-entry master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-03-16 22:03+0100\n"
+"PO-Revision-Date: 2012-03-16 22:11+0100\n"
+"Last-Translator: Andrea Santilli <andreasantilli gmx com>\n"
+"Language-Team: Italiano\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ASCII\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: extension.js:33
+msgid "Restart Shell..."
+msgstr "Riavvia la Shell..."
+
+#: extension.js:34
+msgid "Cancel"
+msgstr "Annulla"
+
+#: extension.js:35
+msgid "Reload theme only"
+msgstr "Ricarica solo il tema"
+
+#: extension.js:36
+msgid "Restart"
+msgstr "Riavvia"
+
+#: extension.js:37
+msgid "Theme reloaded"
+msgstr "Tema ricaricato"
+
+#: extension.js:38
+msgid "Restart the GNOME Shell"
+msgstr "Riavvia GNOME Shell"
+
+#: extension.js:39
+msgid ""
+"This action will restart the GNOME Shell.\n"
+"Do you really wish to do so?"
+msgstr ""
+"Stai per riavviare GNOME Shell\n"
+"Sei sicuro di voler continuare?"
