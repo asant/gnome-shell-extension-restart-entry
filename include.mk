@@ -1,5 +1,5 @@
 extension_url = https://github.com/asant/gnome-shell-extension-restart-entry
-extension_version = 4
+extension_version = 8
 extension_name = restart-entry
 extension_base = @atomant
 uuid = $(extension_name)$(extension_base)
