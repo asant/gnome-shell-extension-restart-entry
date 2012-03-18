@@ -21,6 +21,7 @@
  */
 
 const Clutter       = imports.gi.Clutter;
+const Gio           = imports.gi.Gio;
 const GLib          = imports.gi.GLib;
 const Lang          = imports.lang;
 const Main          = imports.ui.main;
@@ -139,14 +140,30 @@ let srmi;
 let Gettext;
 let _;
 
-function init(metadata) {
-    let locale_path = GLib.build_filenamev([metadata.path, LOCALE_SUBDIR]);
+function init_localizations(metadata) {
+    let data_dirs = new Array(metadata.path);
+    data_dirs = data_dirs.concat(GLib.get_system_data_dirs());
 
     /* I prefer to fetch the uuid from the metadata instead of hardcoding it */
     Gettext = imports.gettext.domain(metadata.uuid);
     _ = Gettext.gettext;
-    imports.gettext.bindtextdomain(metadata.uuid, locale_path);
-    imports.gettext.textdomain(metadata.uuid);
+
+    for (let i = 0; i < data_dirs.length; i++) {
+        let dir = Gio.file_new_for_path(GLib.build_filenamev([ data_dirs[i],
+                LOCALE_SUBDIR ]));
+
+        if ((dir.query_exists(null)) && 
+                (dir.query_file_type(Gio.FileQueryInfoFlags.NONE, null) ==
+                Gio.FileType.DIRECTORY)) {
+            imports.gettext.bindtextdomain(metadata.uuid, dir.get_path());
+            imports.gettext.textdomain(metadata.uuid);
+            break;
+        }
+    }
+}
+
+function init(metadata) {
+    init_localizations(metadata);
 }
 
 function enable() {
