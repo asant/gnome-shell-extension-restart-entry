@@ -13,7 +13,7 @@ zip-file: all
 	cp "$(srcdir)/AUTHORS" -t $(builddir)/_build$(extensiondir); \
 	cp "$(srcdir)/COPYING" -t $(builddir)/_build$(extensiondir); \
 	cp "$(srcdir)/README" -t $(builddir)/_build$(extensiondir); \
-	cp -a "$(builddir)/_build$(localedir)" -t $(builddir)/_build$(extensiondir); \
+	[ -d "$(builddir)/_build$(localedir)" ] && cp -a "$(builddir)/_build$(localedir)" -t $(builddir)/_build$(extensiondir); \
 	(cd "$(builddir)/_build$(extensiondir)"; \
 	 zip -qr "$(abs_builddir)/zip-files/gnome-shell-extension-$(extension_name)" .; \
 	); \
@@ -22,16 +22,13 @@ zip-file: all
 localprefix = $(HOME)/.local/share/gnome-shell/extensions
 
 local-install: zip-file
-	for i in $(ENABLED_EXTENSIONS); do \
-	    uuid="$${i}$(extensionbase)"; \
-		long_name=gnome-shell-extension-$(extension_name); \
-	    zip_file="$(abs_builddir)/zip-files/$(long_name)"; \
-	    if [ -d "$(localprefix)/$${uuid}" ]; then \
-		rm -fR "$(localprefix)/$${uuid}"; \
-	    fi; \
-	    $(MKDIR_P) $(localprefix)/$${uuid}; \
-	    (cd $(localprefix)/$${uuid}; \
-		unzip -q $${zip_file}; \
-	    ); \
-	done
+	long_name=gnome-shell-extension-$(extension_name); \
+	if [ -d "$(localprefix)/${uuid}" ]; then \
+	rm -fR "$(localprefix)/${uuid}"; \
+	fi; \
+	$(MKDIR_P) $(localprefix)/${uuid}; \
+	pushd $(localprefix)/${uuid}; \
+	echo $(zip_file); \
+	unzip -q "$(abs_builddir)/zip-files/gnome-shell-extension-$(extension_name)"; \
+	popd
 
