@@ -1,5 +1,5 @@
 AC_PREREQ(2.63)
-AC_INIT([gnome-shell-extension-restart-entry],[3],[https://github.com/asant/gnome-shell-extension-restart-entry])
+AC_INIT([gnome-shell-extension-restart-entry],[9],[https://github.com/asant/gnome-shell-extension-restart-entry])
 
 AC_CONFIG_MACRO_DIR([m4])
 AC_CONFIG_AUX_DIR([config])
