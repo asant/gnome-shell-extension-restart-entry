@@ -19,7 +19,7 @@ msgstr ""
 
 #: extension.js:33
 msgid "Restart Shell..."
-msgstr "Redémarrer la Shell..."
+msgstr "Redémarrer le Shell..."
 
 #: extension.js:34
 msgid "Cancel"
