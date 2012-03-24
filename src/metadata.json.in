@@ -4,6 +4,7 @@
     "name": "Shell Restart User Menu Entry", 
     "url": "@extension_url@", 
     "description": "A very simple extension that adds a \"restart shell\" function to the user's menu, with a confirm dialog.",
-    "version": @extension_version@
+    "version": @extension_version@,
+    "system-locale-dir": "@system_locale_dir@"
 }
 

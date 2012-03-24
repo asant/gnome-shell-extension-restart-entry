@@ -3,6 +3,7 @@ AC_INIT([gnome-shell-extension-restart-entry],[10],[https://github.com/asant/gno
 
 AC_CONFIG_MACRO_DIR([m4])
 AC_CONFIG_AUX_DIR([config])
+AC_PREFIX_PROGRAM(gnome-shell)
 
 AM_INIT_AUTOMAKE([1.10 dist-bzip2 no-dist-gzip foreign tar-ustar])
 
