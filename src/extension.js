@@ -2,7 +2,7 @@
 /*
  * A very simple GNOME Shell extension that adds a "restart shell"
  * function to the user's menu, with a confirmation dialog.
- * Copyright (C) 2012  Andrea Santilli <andresantilli gmx com>
+ * Copyright (C) 2012  Andrea Santilli <andreasantilli gmx com>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
