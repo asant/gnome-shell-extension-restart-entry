@@ -32,7 +32,6 @@ const St            = imports.gi.St;
 const LOCALE_SUBDIR     = 'locale';
 const LOCALE_EXT        = '.mo';
 const MSG_SUBDIR        = 'LC_MESSAGES';
-const NEW_API_VERSION   = '3.3.5';
 const SHELL_RESTART     = "Restart Shell...";
 const CANCEL_BTN        = "Cancel";
 const RELOAD_BTN        = "Reload theme only";
@@ -41,6 +40,7 @@ const RELOADED_MSG      = "Theme reloaded";
 const TITLE             = "Restart the GNOME Shell";
 const DESCRIPTION       = "This action will restart the GNOME Shell.\n\
 Do you really wish to do so?";
+const NEW_API_VERSION   = [ 3, 3, 0 ];
 
 function ShellRestartMenuItem() {
     this._init.apply(this, arguments);
@@ -142,6 +142,16 @@ let srmi;
 let Gettext;
 let _;
 
+function compare_versions(a, b) {
+    for (let i in a) {
+        if (a[i] == b[i])
+            continue;
+
+        return (a[i] - b[i]);
+    }
+    return 0;
+}
+
 function init_localizations(metadata) {
     let langs = GLib.get_language_names();
     let locale_dirs = new Array(GLib.build_filenamev([metadata.path,
@@ -150,7 +160,9 @@ function init_localizations(metadata) {
 
     /* check whether we're using the right shell version before trying to fetch 
      * its locale directory and other info */
-    if (imports.misc.config.PACKAGE_VERSION < NEW_API_VERSION) {
+    let current_version = imports.misc.config.PACKAGE_VERSION.split('.');
+
+    if (compare_versions(current_version, NEW_API_VERSION) < 0) {
         domain = metadata['gettext-domain'];
         locale_dirs = locale_dirs.concat([ metadata['system-locale-dir'] ]);
     } else {
