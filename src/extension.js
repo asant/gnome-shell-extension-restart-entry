@@ -143,13 +143,15 @@ let Gettext;
 let _;
 
 function compare_versions(a, b) {
-    for (let i in a) {
+    let c = (a.length < b.length)?a:b;
+
+    for (let i in c) {
         if (a[i] == b[i])
             continue;
 
         return (a[i] - b[i]);
     }
-    return 0;
+    return a.length - b.length;
 }
 
 function init_localizations(metadata) {
