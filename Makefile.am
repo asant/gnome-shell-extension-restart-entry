@@ -32,3 +32,7 @@ local-install: zip-file
 	unzip -q "$(abs_builddir)/zip-files/gnome-shell-extension-$(extension_name)"; \
 	popd
 
+clean-local:
+	-rm -rf zip-files ; \
+	rm -f po/*.gmo
+
