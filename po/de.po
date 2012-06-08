@@ -1,0 +1,50 @@
+# German translations for restart-entry package.
+# Copyright (C) 2012 Christian Stadelmann
+# This file is distributed under the same license as the restart-entry package.
+# Christian Stadelmann <chris std web de>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: restart-entry master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-06-07 21:54+0200\n"
+"PO-Revision-Date: 2012-06-07 21:54+0200\n"
+"Last-Translator: Christian Stadelmann <chris std web de>\n"
+"Language-Team: Deutsch <>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bits\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: extension.js:33
+msgid "Restart Shell..."
+msgstr "GNOME Shell neu starten"
+
+#: extension.js:34
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: extension.js:35
+msgid "Reload theme only"
+msgstr "Nur das Theme neu laden"
+
+#: extension.js:36
+msgid "Restart"
+msgstr "Neu starten"
+
+#: extension.js:37
+msgid "Theme reloaded"
+msgstr "Theme neu geladen"
+
+#: extension.js:38
+msgid "Restart the GNOME Shell"
+msgstr "GNOME Shell neu starten"
+
+#: extension.js:39
+msgid ""
+"This action will restart the GNOME Shell.\n"
+"Do you really wish to do so?"
+msgstr ""
+"Dies wird die GNOME Shell neu starten\n"
+"Sind sie sicher?"
