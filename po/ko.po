@@ -1,0 +1,50 @@
+# Korean translations for restart-entry package.
+# Copyright (C) 2012 Seong-ho Cho
+# This file is distributed under the same license as the restart-entry package.
+# Seong-ho Cho <darkcircle dot 0426 at gmail dot com>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: restart-entry master\n"
+"Report-Msgid-Bugs-To: Seong-ho Cho <darkcircle.0426@gmail.com>\n"
+"POT-Creation-Date: 2012-06-07 21:54+0200\n"
+"PO-Revision-Date: 2012-06-07 21:54+0200\n"
+"Last-Translator: Seong-ho Cho <darkcircle.0426@gmail.com>\n"
+"Language-Team: GNOME Korea <gnome-kr@googlegroups.com>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bits\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: extension.js:33
+msgid "Restart Shell..."
+msgstr "쉘 재시작..."
+
+#: extension.js:34
+msgid "Cancel"
+msgstr "취소"
+
+#: extension.js:35
+msgid "Reload theme only"
+msgstr "테마만 다시 불러오기"
+
+#: extension.js:36
+msgid "Restart"
+msgstr "재시작"
+
+#: extension.js:37
+msgid "Theme reloaded"
+msgstr "Theme를 다시 불러왔습니다"
+
+#: extension.js:38
+msgid "Restart the GNOME Shell"
+msgstr "그놈 쉘 재시작"
+
+#: extension.js:39
+msgid ""
+"This action will restart the GNOME Shell.\n"
+"Do you really wish to do so?"
+msgstr ""
+"이 동작은 그놈 쉘을 재시작합니다.\n"
+"정말 실행하시겠습니까?"
