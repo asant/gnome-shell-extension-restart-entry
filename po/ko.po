@@ -35,7 +35,7 @@ msgstr "재시작"
 
 #: extension.js:37
 msgid "Theme reloaded"
-msgstr "Theme를 다시 불러왔습니다"
+msgstr "테마를 다시 불러왔습니다"
 
 #: extension.js:38
 msgid "Restart the GNOME Shell"
